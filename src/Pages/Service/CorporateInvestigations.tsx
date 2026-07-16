@@ -6,6 +6,12 @@ const CorporateInvestigations = () => {
       
       {/* Hero Section (Reference: image_239e21.png) */}
       <section className="bg-[#e7e2d3] dark:bg-[#151514] text-gray-900 dark:text-white px-6 py-24 md:py-32 relative overflow-hidden transition-colors duration-300">
+        <img
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=60"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#e7e2d3]/90 dark:bg-[#151514]/85"></div>
         {/* Subtle background grid pattern */}
         <div 
           className="absolute inset-0 opacity-10 pointer-events-none" 
@@ -54,6 +60,13 @@ const CorporateInvestigations = () => {
               admissible standard so that, should the matter proceed to disciplinary action, arbitration 
               or litigation, your position is fully supported.
             </p>
+            <img
+              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=60"
+              alt="Financial records under audit"
+              loading="lazy"
+              data-animate
+              className="w-full h-64 object-cover border border-[#d1cec3] dark:border-zinc-800 grayscale hover:grayscale-0 transition-all duration-500 mt-8"
+            />
           </div>
 
           {/* Right Column: Dark Box */}

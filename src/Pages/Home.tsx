@@ -6,6 +6,7 @@ interface PracticeItem {
   id: string;
   title: string;
   description: string;
+  image: string;
 }
 
 interface WhyVerityItem {
@@ -21,21 +22,25 @@ const practiceItems: PracticeItem[] = [
     id: '01',
     title: 'Corporate Investigations',
     description: 'Fraud detection, corporate espionage defence, due diligence and internal misconduct enquiries for businesses.',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=60',
   },
   {
     id: '02',
     title: 'Background Verification',
     description: 'Employment screening, criminal record checks, education and address verification with Pan-India coverage.',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=60',
   },
   {
     id: '03',
     title: 'Private Investigations',
     description: 'Missing persons, asset tracing and confidential personal profiling conducted within strict legal compliance.',
+    image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=60',
   },
   {
     id: '04',
     title: 'Matrimonial & Divorce',
     description: 'Pre & post-matrimonial checks, fidelity enquiries and lawful evidence gathering handled with total anonymity.',
+    image: 'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=600&q=60',
   },
 ];
 
@@ -61,6 +66,12 @@ const whyVerityItems: WhyVerityItem[] = [
 
 const HeroSection: React.FC = () => (
   <section className="bg-[#eeeade] dark:bg-[#141414] py-32 px-10 md:px-20 lg:px-40 relative border-b border-[#d1cec3] dark:border-zinc-800 transition-colors duration-300">
+    <img
+      src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1920&q=60"
+      alt=""
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-[#eeeade]/90 dark:bg-[#141414]/85"></div>
     {/* Grid Background */}
     <div className="absolute inset-0 z-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
 
@@ -136,7 +147,15 @@ const PracticesSection: React.FC = () => (
           <div className="col-span-12 md:col-span-1 flex items-center justify-start md:justify-center">
             <span className="text-[#8B2F1D] text-sm tracking-widest uppercase font-mono">{item.id}</span>
           </div>
-          <div className="col-span-12 md:col-span-10 flex flex-col items-start gap-3">
+          <div className="col-span-12 md:col-span-2 hidden md:flex items-center justify-center">
+            <img
+              src={item.image}
+              alt={item.title}
+              loading="lazy"
+              className="w-28 h-20 object-cover border border-[#d1cec3] dark:border-zinc-800 grayscale group-hover:grayscale-0 transition-all duration-500"
+            />
+          </div>
+          <div className="col-span-12 md:col-span-8 flex flex-col items-start gap-3">
             <h3 className="text-2xl font-serif text-gray-900 dark:text-white group-hover:text-[#96762a] dark:group-hover:text-[#D4AA6A] transition-colors">{item.title}</h3>
             <p className="text-gray-600 dark:text-zinc-400 text-base font-light leading-relaxed">{item.description}</p>
           </div>
@@ -174,6 +193,13 @@ const WhyVeritySection: React.FC = () => (
 
 const ContactSection: React.FC = () => (
   <section className="bg-[#7F2F1D] py-24 px-10 md:px-20 lg:px-40 relative">
+    <img
+      src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=1920&q=60"
+      alt=""
+      loading="lazy"
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-[#7F2F1D]/90"></div>
     <div className="absolute inset-0 z-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
     
     <div className="relative z-10 grid grid-cols-12 gap-8 items-center">

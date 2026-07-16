@@ -6,6 +6,12 @@ const MatrimonialInvestigations = () => {
       
       {/* Hero Section (Reference: image_2382fb.png) */}
       <section className="bg-[#e7e2d3] dark:bg-[#151514] text-gray-900 dark:text-white px-6 py-24 md:py-32 relative overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=1920&q=60"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#e7e2d3]/90 dark:bg-[#151514]/85"></div>
         {/* Subtle background grid pattern */}
         <div 
           className="absolute inset-0 opacity-10 pointer-events-none" 
@@ -44,6 +50,13 @@ const MatrimonialInvestigations = () => {
             <p>
               When a relationship reaches divorce, we assist clients and their legal counsel by gathering lawful, admissible evidence to support their case. Throughout every enquiry, your identity remains completely anonymous — the subject of the investigation is never made aware that any checks have taken place.
             </p>
+            <img
+              src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1200&q=60"
+              alt="Trust and fidelity"
+              loading="lazy"
+              data-animate
+              className="w-full h-64 object-cover border border-[#d1cec3] dark:border-zinc-800 grayscale hover:grayscale-0 transition-all duration-500 mt-8"
+            />
           </div>
         </div>
 

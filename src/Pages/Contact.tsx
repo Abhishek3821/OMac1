@@ -14,7 +14,13 @@ const ContactSection: React.FC = () => {
           backgroundSize: '40px 40px'
         }}
       >
-        <div className="max-w-6xl mx-auto">
+        <img
+          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1920&q=60"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#e7e2d3]/90 dark:bg-[#161513]/85"></div>
+        <div className="relative z-10 max-w-6xl mx-auto">
           <p data-animate="fade" className="text-[#a4362d] font-mono text-xs tracking-[0.25em] uppercase mb-8">
             Secure Channel — Contact
           </p>

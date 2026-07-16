@@ -15,7 +15,13 @@ const AboutVerity: React.FC = () => {
           backgroundSize: '40px 40px'
         }}
       >
-        <div className="max-w-6xl mx-auto">
+        <img
+          src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=60"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#e7e2d3]/90 dark:bg-[#161513]/85"></div>
+        <div className="relative z-10 max-w-6xl mx-auto">
           <p data-animate="fade" className="text-[#a4362d] font-mono text-xs tracking-[0.25em] uppercase mb-8">
             File No. 000 — About Verity
           </p>
@@ -47,6 +53,13 @@ const AboutVerity: React.FC = () => {
               We do not take shortcuts. We do not fabricate. We deliver clear, factual, legally 
               admissible findings — and we protect your identity at every step of the way.
             </p>
+            <img
+              src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=60"
+              alt="Verity Investigations office"
+              loading="lazy"
+              data-animate
+              className="w-full h-64 object-cover border border-[#d1cec3] dark:border-zinc-800 grayscale hover:grayscale-0 transition-all duration-500 mt-6"
+            />
           </div>
 
           {/* Right Content - Stats Box */}

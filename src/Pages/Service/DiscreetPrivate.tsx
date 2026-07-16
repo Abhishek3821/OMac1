@@ -6,6 +6,12 @@ const PrivateInvestigations = () => {
       
       {/* Hero Section (Reference: image_23871c.png) */}
       <section className="bg-[#e7e2d3] dark:bg-[#151514] text-gray-900 dark:text-white px-6 py-24 md:py-32 relative overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=60"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#e7e2d3]/90 dark:bg-[#151514]/85"></div>
         {/* Subtle background grid pattern */}
         <div 
           className="absolute inset-0 opacity-10 pointer-events-none" 
@@ -53,6 +59,13 @@ const PrivateInvestigations = () => {
               ours. The evidence we gather is legitimate, verifiable and handled with the utmost 
               discretion.
             </p>
+            <img
+              src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=60"
+              alt="Discreet surveillance operations"
+              loading="lazy"
+              data-animate
+              className="w-full h-64 object-cover border border-[#d1cec3] dark:border-zinc-800 grayscale hover:grayscale-0 transition-all duration-500 mt-8"
+            />
           </div>
 
           {/* Right Column: Dark Box */}

@@ -6,6 +6,12 @@ const BackgroundVerification = () => {
       
       {/* Hero Section (Reference: image_239a43.png) */}
       <section className="bg-[#e7e2d3] dark:bg-[#151514] text-gray-900 dark:text-white px-6 py-24 md:py-32 relative overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1920&q=60"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#e7e2d3]/90 dark:bg-[#151514]/85"></div>
         {/* Subtle background grid pattern */}
         <div 
           className="absolute inset-0 opacity-10 pointer-events-none" 
@@ -44,6 +50,13 @@ const BackgroundVerification = () => {
             <p>
               Speed matters in a competitive hiring market. Our processes are built to return accurate results quickly, without cutting corners — because a verification that is fast but wrong is worse than no verification at all. Every report is source-documented, compliant and ready to support your hiring decision.
             </p>
+            <img
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=60"
+              alt="Verified professional partnership"
+              loading="lazy"
+              data-animate
+              className="w-full h-64 object-cover border border-[#d1cec3] dark:border-zinc-800 grayscale hover:grayscale-0 transition-all duration-500 mt-8"
+            />
           </div>
         </div>
 

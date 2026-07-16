@@ -88,8 +88,14 @@ const CaseFilesSection: React.FC = () => {
           backgroundSize: '40px 40px'
         }}
       >
-        <div className="max-w-6xl mx-auto">
-         
+        <img
+          src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=60"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#e7e2d3]/90 dark:bg-[#161513]/85"></div>
+        <div className="relative z-10 max-w-6xl mx-auto">
+
           <h1 data-animate className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight mb-8">
             Selected engagements,<br className="hidden md:block" />
             <span className="italic text-[#96762a] dark:text-[#c69f44]">declassified.</span>
@@ -144,6 +150,14 @@ const CaseFilesSection: React.FC = () => {
             ))}
 
           </div>
+
+          <img
+            src="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?auto=format&fit=crop&w=1600&q=60"
+            alt="Confidential case notes"
+            loading="lazy"
+            data-animate
+            className="w-full h-56 object-cover border border-[#d1cec3] dark:border-zinc-800 grayscale hover:grayscale-0 transition-all duration-500 mt-4 mb-4"
+          />
 
           {/* Footer Note */}
           <div data-animate="fade" className="mt-12 max-w-3xl">
