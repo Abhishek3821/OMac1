@@ -4,6 +4,7 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Services from './Pages/Services';
 import Cases from './Pages/Cases';
+import SampleReports from './Pages/SampleReports';
 import Contact from './Pages/Contact';
 import Footer from './Pages/Footer';
 import Preloader from './components/Preloader';
@@ -28,6 +29,7 @@ function App() {
         <Route path="/services/private-investigations" element={<PrivateInvestigations />} />
         <Route path="/services/matrimonial-investigations" element={<MatrimonialInvestigations />} />
         <Route path="/cases" element={<Cases />} />
+        <Route path="/sample-reports" element={<SampleReports />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

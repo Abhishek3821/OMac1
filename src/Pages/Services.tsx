@@ -29,6 +29,38 @@ const servicesData = [
   }
 ];
 
+// OMAC Investigations — Service Catalogue
+const catalogueData = [
+  {
+    fileType: 'CI',
+    serviceLine: 'Corporate Investigations',
+    covers: 'Vendor collusion, procurement fraud, conflict of interest, workplace misconduct, internal theft, whistleblower-triggered inquiries.',
+    duration: '2–6 weeks',
+    deliverable: 'Investigation report + evidence file, usable for HR/legal action'
+  },
+  {
+    fileType: 'BGV',
+    serviceLine: 'Background Verification',
+    covers: 'Employment history, education, address, identity, criminal/court record, reference checks — field-verified, not database-only.',
+    duration: '3–15 business days',
+    deliverable: 'Per-candidate verification report'
+  },
+  {
+    fileType: 'PI',
+    serviceLine: 'Private Investigations',
+    covers: 'Asset tracing, surveillance, location and identity verification, counterparty due diligence.',
+    duration: '3 days–4 weeks',
+    deliverable: 'Surveillance log, photo/video evidence, findings report'
+  },
+  {
+    fileType: 'MI',
+    serviceLine: 'Matrimonial & Divorce Investigations',
+    covers: 'Pre-matrimonial background checks, infidelity investigations, concealed asset tracing, misrepresented status verification.',
+    duration: '1–6 weeks',
+    deliverable: 'Findings report, evidence usable in legal proceedings where applicable'
+  }
+];
+
 const PracticesSection: React.FC = () => {
   return (
     <section className="w-full font-serif">
@@ -108,6 +140,65 @@ const PracticesSection: React.FC = () => {
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* Service Catalogue */}
+          <div className="mt-24 md:mt-32">
+            <div data-animate className="pb-8 border-b border-[#d1cec3] dark:border-zinc-800 mb-10">
+              <p className="text-[#a4362d] font-mono text-xs tracking-[0.25em] uppercase mb-6">
+                OMAC Investigations — Service Catalogue
+              </p>
+              <p className="font-serif italic text-gray-600 dark:text-gray-400 text-lg">
+                Corporate, background verification, private and matrimonial investigation services — India
+              </p>
+            </div>
+
+            {/* Desktop table */}
+            <div data-animate className="hidden lg:block border border-[#d1cec3] dark:border-zinc-800">
+              {/* Header row */}
+              <div className="grid grid-cols-12 bg-[#161513] dark:bg-black text-white">
+                <div className="col-span-1 px-4 py-4 font-mono text-[10px] tracking-[0.2em] uppercase">File Type</div>
+                <div className="col-span-2 px-4 py-4 font-mono text-[10px] tracking-[0.2em] uppercase">Service Line</div>
+                <div className="col-span-5 px-4 py-4 font-mono text-[10px] tracking-[0.2em] uppercase">What It Covers</div>
+                <div className="col-span-2 px-4 py-4 font-mono text-[10px] tracking-[0.2em] uppercase">Typical Duration</div>
+                <div className="col-span-2 px-4 py-4 font-mono text-[10px] tracking-[0.2em] uppercase">Deliverable</div>
+              </div>
+              {catalogueData.map((row, index) => (
+                <div
+                  key={row.fileType}
+                  className={`grid grid-cols-12 ${index < catalogueData.length - 1 ? 'border-b border-[#d1cec3] dark:border-zinc-800' : ''} hover:bg-[#e8e4d8] dark:hover:bg-[#22201c] transition-colors duration-300`}
+                >
+                  <div className="col-span-1 px-4 py-6 font-mono text-sm text-[#a4362d] tracking-widest">{row.fileType}</div>
+                  <div className="col-span-2 px-4 py-6 font-serif text-gray-900 dark:text-gray-100">{row.serviceLine}</div>
+                  <div className="col-span-5 px-4 py-6 font-serif text-gray-600 dark:text-gray-400 leading-relaxed">{row.covers}</div>
+                  <div className="col-span-2 px-4 py-6 font-serif text-gray-900 dark:text-gray-100">{row.duration}</div>
+                  <div className="col-span-2 px-4 py-6 font-serif text-gray-600 dark:text-gray-400 leading-relaxed">{row.deliverable}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Mobile / tablet stacked cards */}
+            <div className="lg:hidden space-y-6">
+              {catalogueData.map((row, index) => (
+                <div
+                  key={row.fileType}
+                  data-animate
+                  data-delay={index * 100}
+                  className="border border-[#d1cec3] dark:border-zinc-800 bg-[#fbf9f5] dark:bg-[#1e1d1a] p-6"
+                >
+                  <div className="flex items-baseline gap-4 mb-4">
+                    <span className="font-mono text-sm text-[#a4362d] tracking-widest">{row.fileType}</span>
+                    <h3 className="font-serif text-xl text-gray-900 dark:text-gray-100">{row.serviceLine}</h3>
+                  </div>
+                  <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-gray-500 dark:text-zinc-500 mb-1">What It Covers</p>
+                  <p className="font-serif text-gray-600 dark:text-gray-400 leading-relaxed mb-4">{row.covers}</p>
+                  <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-gray-500 dark:text-zinc-500 mb-1">Typical Duration</p>
+                  <p className="font-serif text-gray-900 dark:text-gray-100 mb-4">{row.duration}</p>
+                  <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-gray-500 dark:text-zinc-500 mb-1">Deliverable</p>
+                  <p className="font-serif text-gray-600 dark:text-gray-400 leading-relaxed">{row.deliverable}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -39,6 +39,9 @@ const Footer = () => {
                 <Link to="/services" className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors duration-300">Services</Link>
               </li>
               <li>
+                <Link to="/sample-reports" className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors duration-300">Sample Reports</Link>
+              </li>
+              <li>
                 <Link to="/contact" className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors duration-300">Contact</Link>
               </li>
             </ul>
