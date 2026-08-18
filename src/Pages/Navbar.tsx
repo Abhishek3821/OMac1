@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import Logo from './Logo.png';
 
 const navItems = [
   { label: 'HOME', to: '/' },
@@ -27,10 +28,17 @@ const Navbar: React.FC = () => {
     <nav className="w-full bg-[#eeeade] dark:bg-[#12110e] px-12 py-5 flex items-center justify-between border-b border-[#d1cec3] dark:border-[#23211c] transition-colors duration-300">
 
       {/* Logo Section */}
-      <Link to="/" className="flex items-baseline space-x-3 cursor-pointer">
-        <span className="text-3xl font-serif text-gray-900 dark:text-[#f2ecda]">Verity</span>
-        <span className="text-xs tracking-[0.25em] text-[#9b2a2a] font-medium uppercase">
-          Investigations
+      <Link to="/" className="flex items-center gap-3 cursor-pointer">
+        <img
+          src={Logo}
+          alt="OMAC (One Man Army Convoy)"
+          className="h-12 w-12 rounded-md object-contain shrink-0"
+        />
+        <span className="flex items-baseline space-x-3">
+          <span className="text-3xl font-serif text-gray-900 dark:text-[#f2ecda]">OMAC</span>
+          <span className="hidden lg:inline text-xs tracking-[0.18em] text-[#9b2a2a] font-medium uppercase">
+            One Man Army Convoy
+          </span>
         </span>
       </Link>
 

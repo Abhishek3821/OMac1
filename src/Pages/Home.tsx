@@ -9,7 +9,7 @@ interface PracticeItem {
   image: string;
 }
 
-interface WhyVerityItem {
+interface WhyOmacItem {
   id: string;
   title: string;
   description: string;
@@ -44,7 +44,7 @@ const practiceItems: PracticeItem[] = [
   },
 ];
 
-const whyVerityItems: WhyVerityItem[] = [
+const whyOmacItems: WhyOmacItem[] = [
   {
     id: '/ 01',
     title: 'Ethical',
@@ -168,20 +168,20 @@ const PracticesSection: React.FC = () => (
   </section>
 );
 
-const WhyVeritySection: React.FC = () => (
+const WhyOmacSection: React.FC = () => (
   <section className="bg-[#eeeade] dark:bg-[#121212] py-32 px-10 md:px-20 lg:px-40 relative transition-colors duration-300">
      <div className="absolute inset-0 z-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)', backgroundSize: '16px 16px' }}></div>
      
     <div data-animate className="relative z-10 flex flex-col items-start gap-4 pb-12 mb-16">
-        <span className="text-[#8B2F1D] text-sm tracking-[0.2em] uppercase font-mono">SECTION 02 — WHY VERITY</span>
+        <span className="text-[#8B2F1D] text-sm tracking-[0.2em] uppercase font-mono">SECTION 02 — WHY OMAC</span>
         <h2 className="text-4xl md:text-5xl font-serif text-gray-900 dark:text-white leading-tight max-w-xl">
           A partner you can trust with the truth
         </h2>
     </div>
 
     <div className="relative z-10 border border-[#d1cec3] dark:border-zinc-800 bg-[#f4f1eb] dark:bg-[#141414] rounded-lg shadow-inner grid grid-cols-1 md:grid-cols-3 divide-x divide-[#d1cec3] dark:divide-zinc-800">
-      {whyVerityItems.map((item, index) => (
-        <div key={item.id} data-animate data-delay={index * 150} className={`flex flex-col items-start gap-6 p-10 ${index === whyVerityItems.length - 1 ? 'md:border-none' : ''}`}>
+      {whyOmacItems.map((item, index) => (
+        <div key={item.id} data-animate data-delay={index * 150} className={`flex flex-col items-start gap-6 p-10 ${index === whyOmacItems.length - 1 ? 'md:border-none' : ''}`}>
            <span className="text-[#96762a] dark:text-[#D4AA6A] text-sm tracking-[0.1em] uppercase font-mono">{item.id}</span>
            <h3 className="text-2xl font-serif text-gray-900 dark:text-white">{item.title}</h3>
            <p className="text-gray-600 dark:text-zinc-400 text-base font-light leading-relaxed">{item.description}</p>
@@ -227,7 +227,7 @@ const InvestigativeServicesPage: React.FC = () => {
       <HeroSection />
       <StatsSection />
       <PracticesSection />
-      <WhyVeritySection />
+      <WhyOmacSection />
       <ContactSection />
     </div>
   );

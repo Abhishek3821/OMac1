@@ -47,9 +47,9 @@ const Preloader: React.FC = () => {
         </p>
 
         <div className="preloader-rise-delay flex items-baseline gap-3 mb-10">
-          <span className="text-5xl md:text-6xl font-serif text-[#f2ecda]">Verity</span>
-          <span className="text-xs tracking-[0.3em] text-[#c69f44] font-medium uppercase">
-            Investigations
+          <span className="text-5xl md:text-6xl font-serif text-[#f2ecda]">OMAC</span>
+          <span className="text-xs tracking-[0.25em] text-[#c69f44] font-medium uppercase">
+            One Man Army Convoy
           </span>
         </div>
 

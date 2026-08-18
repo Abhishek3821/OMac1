@@ -42,7 +42,7 @@ const BackgroundVerification = () => {
           </h2>
           <div data-animate data-delay="150" className="space-y-6 text-lg leading-relaxed text-gray-800 dark:text-gray-200">
             <p>
-              A single bad hire can cost far more than a salary. Falsified credentials, undisclosed criminal history and fabricated experience expose organisations to fraud, liability and reputational harm. Verity's background verification services give HR and hiring teams a complete, dependable picture of every candidate — before an offer is signed.
+              A single bad hire can cost far more than a salary. Falsified credentials, undisclosed criminal history and fabricated experience expose organisations to fraud, liability and reputational harm. OMAC's background verification services give HR and hiring teams a complete, dependable picture of every candidate — before an offer is signed.
             </p>
             <p>
               Our checks cover employment history and reference validation, criminal and court record searches, education and qualification verification, and current and permanent address confirmation. Where required, we extend screening to credit history, professional licence checks and global database searches for senior and sensitive roles.

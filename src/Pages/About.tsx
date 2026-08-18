@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AboutVerity: React.FC = () => {
+const AboutOmac: React.FC = () => {
   return (
     <section className="w-full">
       {/* Top Section - Dark Header with Grid */}
@@ -23,7 +23,7 @@ const AboutVerity: React.FC = () => {
         <div className="absolute inset-0 bg-[#e7e2d3]/90 dark:bg-[#161513]/85"></div>
         <div className="relative z-10 max-w-6xl mx-auto">
           <p data-animate="fade" className="text-[#a4362d] font-mono text-xs tracking-[0.25em] uppercase mb-8">
-            File No. 000 — About Verity
+            File No. 000 — About OMAC
           </p>
           <h1 data-animate className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight">
             A decade of discreet, <span className="italic text-[#96762a] dark:text-[#c69f44]">decisive</span><br className="hidden md:block" />
@@ -39,7 +39,7 @@ const AboutVerity: React.FC = () => {
           {/* Left Content - Paragraphs */}
           <div data-animate="fade-left" className="flex-1 space-y-8 font-serif text-[1.1rem] leading-relaxed">
             <p className="text-gray-900 dark:text-gray-100">
-              Verity Investigations is a licensed private investigation and background 
+              OMAC (One Man Army Convoy) is a licensed private investigation and background 
               verification agency operating across India. For over ten years we have 
               supported corporations, law firms, HR teams and private individuals with 
               intelligence that stands up to scrutiny — in the boardroom and in court.
@@ -55,7 +55,7 @@ const AboutVerity: React.FC = () => {
             </p>
             <img
               src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=60"
-              alt="Verity Investigations office"
+              alt="OMAC (One Man Army Convoy) office"
               loading="lazy"
               data-animate
               className="w-full h-64 object-cover border border-[#d1cec3] dark:border-zinc-800 grayscale hover:grayscale-0 transition-all duration-500 mt-6"
@@ -107,4 +107,4 @@ const AboutVerity: React.FC = () => {
   );
 };
 
-export default AboutVerity;
+export default AboutOmac;

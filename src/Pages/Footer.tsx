@@ -12,9 +12,9 @@ const Footer = () => {
           {/* Logo & About (Takes up 4 columns on large screens) */}
           <div data-animate data-delay="0" className="lg:col-span-4 lg:pr-8">
             <div className="flex items-baseline gap-3 mb-6">
-              <span className="text-3xl font-bold text-gray-900 dark:text-white">Verity</span>
-              <span className="text-[#a63c32] uppercase tracking-[0.2em] text-xs font-sans font-semibold">
-                Investigations
+              <span className="text-3xl font-bold text-gray-900 dark:text-white">OMAC</span>
+              <span className="text-[#a63c32] uppercase tracking-[0.18em] text-xs font-sans font-semibold">
+                One Man Army Convoy
               </span>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed">
@@ -82,8 +82,8 @@ const Footer = () => {
                 +91 22 4000 8899
               </p>
               <p className="text-gray-700 dark:text-gray-300 font-mono text-sm">
-                <a href="mailto:secure@verityinvestigations.com" className="hover:text-black dark:hover:text-white transition-colors duration-300">
-                  secure@verityinvestigations.com
+                <a href="mailto:secure@omacinvestigations.com" className="hover:text-black dark:hover:text-white transition-colors duration-300">
+                  secure@omacinvestigations.com
                 </a>
               </p>
             </div>
@@ -94,7 +94,7 @@ const Footer = () => {
         {/* Disclaimer Section */}
         <div data-animate="fade" className="border-t border-[#d1cec3] dark:border-gray-800/80 pt-8 pb-8">
           <p className="text-gray-500 dark:text-[#8c8a85] text-sm leading-relaxed max-w-5xl">
-            <span className="text-gray-600 dark:text-gray-400">Confidentiality Disclaimer.</span> All communications with Verity Investigations 
+            <span className="text-gray-600 dark:text-gray-400">Confidentiality Disclaimer.</span> All communications with OMAC (One Man Army Convoy) 
             are treated as strictly confidential. Our services are provided in full compliance with applicable Indian law. 
             We do not undertake any assignment that is unlawful or that infringes upon the legal rights or privacy of any individual.
           </p>
@@ -103,7 +103,7 @@ const Footer = () => {
         {/* Bottom Copyright Section */}
         <div data-animate="fade" className="border-t border-[#d1cec3] dark:border-gray-800/80 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-mono text-xs text-gray-500 dark:text-[#8c8a85]">
-            © 2026 Verity Investigations Pvt. Ltd. All rights reserved.
+            © 2026 OMAC (One Man Army Convoy) Pvt. Ltd. All rights reserved.
           </p>
           <p className="font-mono text-xs text-gray-500 dark:text-[#8c8a85]">
             Licensed Private Investigation Agency

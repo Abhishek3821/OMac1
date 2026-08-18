@@ -45,7 +45,7 @@ const CorporateInvestigations = () => {
               The most damaging threats a company faces rarely arrive through the front door. 
               Corporate espionage, internal fraud and the theft of intellectual property are 
               frequently orchestrated by trusted insiders — employees, vendors or partners with 
-              privileged access to your systems and secrets. Verity gives leadership the factual 
+              privileged access to your systems and secrets. OMAC gives leadership the factual 
               clarity needed to act decisively and lawfully.
             </p>
             <p>

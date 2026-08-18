@@ -42,7 +42,7 @@ const PrivateInvestigations = () => {
             </h2>
             <p>
               Some questions are too personal, too sensitive, or too important to leave 
-              unanswered. Verity's private investigation practice supports individuals and 
+              unanswered. OMAC's private investigation practice supports individuals and 
               families who need discreet, reliable answers — delivered without judgement and 
               protected by absolute confidentiality.
             </p>

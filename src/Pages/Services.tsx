@@ -29,7 +29,7 @@ const servicesData = [
   }
 ];
 
-// OMAC Investigations — Service Catalogue
+// OMAC (One Man Army Convoy) — Service Catalogue
 const catalogueData = [
   {
     fileType: 'CI',
@@ -146,7 +146,7 @@ const PracticesSection: React.FC = () => {
           <div className="mt-24 md:mt-32">
             <div data-animate className="pb-8 border-b border-[#d1cec3] dark:border-zinc-800 mb-10">
               <p className="text-[#a4362d] font-mono text-xs tracking-[0.25em] uppercase mb-6">
-                OMAC Investigations — Service Catalogue
+                OMAC (One Man Army Convoy) — Service Catalogue
               </p>
               <p className="font-serif italic text-gray-600 dark:text-gray-400 text-lg">
                 Corporate, background verification, private and matrimonial investigation services — India

@@ -436,7 +436,7 @@ const ReportCard: React.FC<{
         <p className="font-serif text-gray-800 dark:text-gray-200 leading-relaxed mb-8">{report.conclusion}</p>
 
         <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-gray-500 dark:text-zinc-500 border-t border-[#d1cec3] dark:border-zinc-800 pt-4">
-          Confidential. Prepared by OMAC Investigations for the named client only. Not for circulation.
+          Confidential. Prepared by OMAC (One Man Army Convoy) for the named client only. Not for circulation.
         </p>
       </div>
     )}
@@ -470,7 +470,7 @@ const SampleReports: React.FC = () => {
 
         <div className="relative z-10 max-w-6xl mx-auto">
           <p data-animate="fade" className="text-[#a4362d] font-mono text-xs tracking-[0.25em] uppercase mb-8">
-            OMAC Investigations — Sample Report Catalogue
+            OMAC (One Man Army Convoy) — Sample Report Catalogue
           </p>
           <h1 data-animate className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
             Twelve formats. One{' '}
