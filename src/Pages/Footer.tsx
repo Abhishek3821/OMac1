@@ -75,15 +75,18 @@ const Footer = () => {
             </h4>
             <div className="space-y-6">
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                Level 9, Meridian Tower, BKC,<br />
-                Mumbai 400051, India
+                2733, 3rd Floor, 16th Cross Road,<br />
+                27th Main Road, 1st Sector, HSR Layout,<br />
+                Bengaluru, Karnataka 560102, India
               </p>
               <p className="text-gray-700 dark:text-gray-300 font-mono text-sm tracking-wider">
-                +91 22 4000 8899
+                <a href="tel:+918116645359" className="hover:text-black dark:hover:text-white transition-colors duration-300">
+                  +91 81166 45359
+                </a>
               </p>
               <p className="text-gray-700 dark:text-gray-300 font-mono text-sm">
-                <a href="mailto:secure@omacinvestigations.com" className="hover:text-black dark:hover:text-white transition-colors duration-300">
-                  secure@omacinvestigations.com
+                <a href="mailto:omacinvestigations@gmail.com" className="hover:text-black dark:hover:text-white transition-colors duration-300 break-all">
+                  omacinvestigations@gmail.com
                 </a>
               </p>
             </div>

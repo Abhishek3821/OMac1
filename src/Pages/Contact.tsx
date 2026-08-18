@@ -150,9 +150,10 @@ const ContactSection: React.FC = () => {
                     Head Office
                   </p>
                   <p className="font-serif text-gray-800 dark:text-gray-200 leading-relaxed">
-                    Level 9, Meridian Tower,<br />
-                    Bandra Kurla Complex,<br />
-                    Mumbai 400051, India
+                    2733, 3rd Floor, 16th Cross Road,<br />
+                    27th Main Road, 1st Sector,<br />
+                    HSR Layout, Bengaluru,<br />
+                    Karnataka 560102, India
                   </p>
                 </div>
                 
@@ -163,9 +164,9 @@ const ContactSection: React.FC = () => {
                   <p className="text-gray-600 dark:text-gray-400 font-mono text-[10px] tracking-widest uppercase mb-3">
                     24/7 Helpline
                   </p>
-                  <p className="font-serif text-2xl text-gray-800 dark:text-gray-200">
-                    +91 22 4000 8899
-                  </p>
+                  <a href="tel:+918116645359" className="font-serif text-2xl text-gray-800 dark:text-gray-200 hover:text-[#96762a] dark:hover:text-[#c69f44] transition-colors">
+                    +91 81166 45359
+                  </a>
                 </div>
                 
                 <hr className="border-[#d1cec3] dark:border-gray-800" />
@@ -175,8 +176,8 @@ const ContactSection: React.FC = () => {
                   <p className="text-gray-600 dark:text-gray-400 font-mono text-[10px] tracking-widest uppercase mb-3">
                     Encrypted Email
                   </p>
-                  <a href="mailto:secure@omacinvestigations.com" className="font-mono text-sm text-gray-800 dark:text-gray-200 hover:text-[#96762a] dark:hover:text-[#c69f44] transition-colors">
-                    secure@omacinvestigations.com
+                  <a href="mailto:omacinvestigations@gmail.com" className="font-mono text-sm text-gray-800 dark:text-gray-200 hover:text-[#96762a] dark:hover:text-[#c69f44] transition-colors break-all">
+                    omacinvestigations@gmail.com
                   </a>
                 </div>
               </div>
