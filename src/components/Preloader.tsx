@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Logo from '../Pages/Logo.png';
 
 /**
  * Full-screen branded preloader shown once on initial page load.
@@ -45,6 +46,12 @@ const Preloader: React.FC = () => {
         <p className="preloader-rise text-[#9b2a2a] font-mono text-[11px] tracking-[0.35em] uppercase mb-6">
           Case File — Opening<span className="preloader-blink">_</span>
         </p>
+
+        <img
+          src={Logo}
+          alt=""
+          className="preloader-logo h-20 w-20 md:h-24 md:w-24 rounded-lg object-contain ring-1 ring-[#2a2823] mb-7"
+        />
 
         <div className="preloader-rise-delay flex items-baseline gap-3 mb-10">
           <span className="text-5xl md:text-6xl font-serif text-[#f2ecda]">OMAC</span>
