@@ -77,7 +77,7 @@ const HeroSection: React.FC = () => (
 
     <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10">
       <div className="flex flex-col items-start gap-1">
-        <span data-animate="fade" className="text-[#8B2F1D] text-sm tracking-[0.2em] uppercase font-mono">FILE NO. 001 —</span>
+        {/* <span data-animate="fade" className="text-[#8B2F1D] text-sm tracking-[0.2em] uppercase font-mono">FILE NO. 001 —</span> */}
       </div>
     </div>
     
@@ -129,7 +129,7 @@ const PracticesSection: React.FC = () => (
 
     <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-12 border-b border-[#d1cec3] dark:border-zinc-800">
       <div data-animate className="flex flex-col items-start gap-3">
-        <span className="text-[#8B2F1D] text-sm tracking-[0.2em] uppercase font-mono">SECTION 01 — PRACTICES</span>
+        <span className="text-[#8B2F1D] text-sm tracking-[0.2em] uppercase font-mono">PRACTICES</span>
         <h2 className="text-4xl md:text-5xl font-serif text-gray-900 dark:text-white leading-tight max-w-xl">
           Specialised investigation, handled discreetly
         </h2>
@@ -173,7 +173,7 @@ const WhyOmacSection: React.FC = () => (
      <div className="absolute inset-0 z-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)', backgroundSize: '16px 16px' }}></div>
      
     <div data-animate className="relative z-10 flex flex-col items-start gap-4 pb-12 mb-16">
-        <span className="text-[#8B2F1D] text-sm tracking-[0.2em] uppercase font-mono">SECTION 02 — WHY OMAC</span>
+        <span className="text-[#8B2F1D] text-sm tracking-[0.2em] uppercase font-mono">WHY OMAC</span>
         <h2 className="text-4xl md:text-5xl font-serif text-gray-900 dark:text-white leading-tight max-w-xl">
           A partner you can trust with the truth
         </h2>
