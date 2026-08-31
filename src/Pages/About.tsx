@@ -23,7 +23,7 @@ const AboutOmac: React.FC = () => {
         <div className="absolute inset-0 bg-[#e7e2d3]/90 dark:bg-[#161513]/85"></div>
         <div className="relative z-10 max-w-6xl mx-auto">
           <p data-animate="fade" className="text-[#a4362d] font-mono text-xs tracking-[0.25em] uppercase mb-8">
-            File No. 000 — About OMAC
+           About OMAC
           </p>
           <h1 data-animate className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight">
             A decade of discreet, <span className="italic text-[#96762a] dark:text-[#c69f44]">decisive</span><br className="hidden md:block" />

@@ -17,6 +17,31 @@ const Navbar: React.FC = () => {
     return saved === 'light' ? 'light' : 'dark';
   });
 
+  // State to handle navbar visibility
+  const [isVisible, setIsVisible] = useState(true);
+
+  // Effect for hiding/showing navbar on scroll
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // If scrolling down and past 50px, hide the navbar
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // If scrolling up, show the navbar
+        setIsVisible(true);
+      }
+      
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark');
     localStorage.setItem('theme', theme);
@@ -25,7 +50,11 @@ const Navbar: React.FC = () => {
   const toggleTheme = () => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
 
   return (
-    <nav className="w-full bg-[#eeeade] dark:bg-[#12110e] px-12 py-5 flex items-center justify-between border-b border-[#d1cec3] dark:border-[#23211c] transition-colors duration-300">
+    <nav 
+      className={`w-full bg-[#eeeade] dark:bg-[#12110e] px-12 py-5 flex items-center justify-between border-b border-[#d1cec3] dark:border-[#23211c] fixed top-0 left-0 z-50 transform transition-all duration-300 ease-in-out ${
+        isVisible ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    >
 
       {/* Logo Section */}
       <Link to="/" className="flex items-center gap-3 cursor-pointer">
