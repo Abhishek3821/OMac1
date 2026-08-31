@@ -27,7 +27,6 @@ const reports: SampleReport[] = [
       ['Service Line', 'BGV — Basic (ID + Address + Education)'],
       ['Client Type', 'Mid-sized retail company, Bengaluru'],
       ['Candidate', 'Candidate A (Store Associate role)'],
-      ['Engagement Fee', '₹599 per candidate'],
       ['Turnaround', '4 business days'],
     ],
     scope:
@@ -53,7 +52,6 @@ const reports: SampleReport[] = [
       ['Service Line', 'BGV — Standard (+2 Employment + Court)'],
       ['Client Type', 'IT services company, Bengaluru'],
       ['Candidate', 'Candidate B (Assistant Manager, Operations)'],
-      ['Engagement Fee', '₹1,299 per candidate'],
       ['Turnaround', '9 business days'],
     ],
     scope:
@@ -80,7 +78,7 @@ const reports: SampleReport[] = [
       ['Service Line', 'BGV — Comprehensive (+Criminal DB + References)'],
       ['Client Type', 'NBFC, Mumbai'],
       ['Candidate', 'Candidate C (Senior Manager, Credit Risk)'],
-      ['Engagement Fee', '₹2,199 per candidate'],
+   
       ['Turnaround', '13 business days'],
     ],
     scope:
@@ -107,7 +105,6 @@ const reports: SampleReport[] = [
       ['Service Line', 'CI — Preliminary Assessment'],
       ['Client Type', 'D2C consumer brand, Pune'],
       ['Matter', 'Suspected inventory shrinkage, single warehouse'],
-      ['Engagement Fee', '₹15,000 flat (creditable against full engagement)'],
       ['Turnaround', '5 business days'],
     ],
     scope:
@@ -133,7 +130,6 @@ const reports: SampleReport[] = [
       ['Service Line', 'CI — Standard Engagement (single site, <30 days)'],
       ['Client Type', 'D2C consumer brand, Pune (continuation of CI-PA-1187)'],
       ['Matter', 'Warehouse inventory shrinkage — full investigation'],
-      ['Engagement Fee', '₹65,000 (from)'],
       ['Duration', '22 days'],
     ],
     scope:
@@ -159,7 +155,6 @@ const reports: SampleReport[] = [
       ['Service Line', 'CI — Complex / Multi-site Engagement'],
       ['Client Type', 'NBFC, multi-city branch network'],
       ['Matter', 'Suspected vendor kickback scheme across 3 branches'],
-      ['Engagement Fee', '₹1,50,000 (from; final quote custom-scoped)'],
       ['Duration', '9 weeks'],
     ],
     scope:
@@ -185,7 +180,6 @@ const reports: SampleReport[] = [
       ['Service Line', 'PI — Asset Trace / Individual Verification'],
       ['Client Type', 'Individual, via referring counsel'],
       ['Matter', "Verification of counterparty's declared financial standing before a personal loan agreement"],
-      ['Engagement Fee', '₹22,000 (from)'],
       ['Duration', '11 days'],
     ],
     scope:
@@ -211,7 +205,7 @@ const reports: SampleReport[] = [
       ['Service Line', 'PI — Surveillance (single investigator / 2-investigator team)'],
       ['Client Type', 'Individual'],
       ['Matter', "Verification of subject's stated daily routine and workplace attendance"],
-      ['Engagement Fee', '₹5,000/day (single) or ₹8,500/day (2-investigator team); minimum 3 days'],
+      
       ['Duration', '4 days, single investigator'],
     ],
     scope:
@@ -237,7 +231,6 @@ const reports: SampleReport[] = [
       ['Service Line', 'MI — Pre-matrimonial, Standard'],
       ['Client Type', 'Family, Delhi NCR'],
       ['Subject', 'Prospective groom, proposed alliance'],
-      ['Engagement Fee', '₹28,000'],
       ['Duration', '12 days'],
     ],
     scope:
@@ -263,7 +256,6 @@ const reports: SampleReport[] = [
       ['Service Line', 'MI — Pre-matrimonial, Comprehensive'],
       ['Client Type', 'Family, Delhi NCR'],
       ['Subject', 'Prospective groom, proposed alliance'],
-      ['Engagement Fee', '₹48,000'],
       ['Duration', '19 days'],
     ],
     scope:
@@ -289,7 +281,6 @@ const reports: SampleReport[] = [
       ['Service Line', 'MI — Post-matrimonial / Infidelity Surveillance'],
       ['Client Type', 'Individual, Mumbai'],
       ['Subject', "Client's spouse"],
-      ['Engagement Fee', '₹45,000 (from; duration-based, quoted after scoping call)'],
       ['Duration', '10 days'],
     ],
     scope:
@@ -315,7 +306,6 @@ const reports: SampleReport[] = [
       ['Service Line', 'MI — Divorce Evidence / Asset Trace Support'],
       ['Client Type', 'Individual, via referring counsel, Pune'],
       ['Matter', "Verification of opposing party's declared income and assets in ongoing divorce proceeding"],
-      ['Engagement Fee', '₹40,000 (from)'],
       ['Duration', '16 days'],
     ],
     scope:
