@@ -1,5 +1,49 @@
 import React, { FormEvent, useState } from 'react';
 
+const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+async function sendWithEmailJs(form: Record<string, string>) {
+  const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      service_id: EMAILJS_SERVICE_ID,
+      template_id: EMAILJS_TEMPLATE_ID,
+      user_id: EMAILJS_PUBLIC_KEY,
+      template_params: {
+        from_name: form.name,
+        from_email: form.email,
+        phone: form.phone,
+        service: form.service,
+        message: form.message,
+        reply_to: form.email,
+        to_email: 'ceo@omacinvestigations.com',
+      },
+    }),
+  });
+  if (!response.ok) throw new Error('EmailJS could not send the enquiry.');
+}
+
+async function sendWithFormSubmit(form: Record<string, string>) {
+  const response = await fetch('https://formsubmit.co/ajax/ceo@omacinvestigations.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify({
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      service: form.service,
+      message: form.message,
+      _subject: `New website enquiry: ${form.name}`,
+      _template: 'table',
+      _captcha: 'false',
+    }),
+  });
+  if (!response.ok) throw new Error('FormSubmit could not send the enquiry.');
+}
+
 const ContactSection: React.FC = () => {
   const [form, setForm] = useState({ name: '', phone: '', email: '', service: '', message: '', website: '' });
   const [status, setStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
@@ -14,14 +58,13 @@ const ContactSection: React.FC = () => {
     setStatus(null);
     setIsSubmitting(true);
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-      const result = await response.json();
-      if (!response.ok) throw new Error(result.message || 'Unable to send your enquiry.');
-      setStatus({ type: 'success', message: result.message });
+      if (form.website) return;
+      if (EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY) {
+        await sendWithEmailJs(form);
+      } else {
+        await sendWithFormSubmit(form);
+      }
+      setStatus({ type: 'success', message: 'Thank you. Your confidential enquiry has been sent.' });
       setForm({ name: '', phone: '', email: '', service: '', message: '', website: '' });
     } catch (error) {
       setStatus({ type: 'error', message: error instanceof Error ? error.message : 'Unable to send your enquiry.' });
