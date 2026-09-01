@@ -176,8 +176,8 @@ const ContactSection: React.FC = () => {
                   <p className="text-gray-600 dark:text-gray-400 font-mono text-[10px] tracking-widest uppercase mb-3">
                     Encrypted Email
                   </p>
-                  <a href="mailto:omacinvestigations@gmail.com" className="font-mono text-sm text-gray-800 dark:text-gray-200 hover:text-[#96762a] dark:hover:text-[#c69f44] transition-colors break-all">
-                    omacinvestigations@gmail.com
+                  <a href="mailto:ceo@omacinvestigations.com" className="font-mono text-sm text-gray-800 dark:text-gray-200 hover:text-[#96762a] dark:hover:text-[#c69f44] transition-colors break-all">
+                    ceo@omacinvestigations.com
                   </a>
                 </div>
               </div>
