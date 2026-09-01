@@ -1,6 +1,35 @@
-import React from 'react';
+import React, { FormEvent, useState } from 'react';
 
 const ContactSection: React.FC = () => {
+  const [form, setForm] = useState({ name: '', phone: '', email: '', service: '', message: '', website: '' });
+  const [status, setStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const updateField = (field: keyof typeof form) => (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setForm((current) => ({ ...current, [field]: event.target.value }));
+  };
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus(null);
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.message || 'Unable to send your enquiry.');
+      setStatus({ type: 'success', message: result.message });
+      setForm({ name: '', phone: '', email: '', service: '', message: '', website: '' });
+    } catch (error) {
+      setStatus({ type: 'error', message: error instanceof Error ? error.message : 'Unable to send your enquiry.' });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="w-full">
       {/* Top Section - Dark Header with Grid */}
@@ -49,7 +78,17 @@ const ContactSection: React.FC = () => {
               </p>
             </div>
 
-            <form className="space-y-10">
+            <form className="space-y-10" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="website"
+                value={form.website}
+                onChange={updateField('website')}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="hidden"
+              />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {/* Full Name */}
                 <div className="flex flex-col">
@@ -59,6 +98,9 @@ const ContactSection: React.FC = () => {
                   <input 
                     type="text" 
                     placeholder="Your name" 
+                    value={form.name}
+                    onChange={updateField('name')}
+                    required
                     className="w-full border-b border-gray-300 dark:border-zinc-600 bg-transparent py-2 font-serif text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-zinc-500 focus:outline-none focus:border-[#a4362d] transition-colors"
                   />
                 </div>
@@ -70,6 +112,9 @@ const ContactSection: React.FC = () => {
                   <input 
                     type="tel" 
                     placeholder="+91 00000 00000" 
+                    value={form.phone}
+                    onChange={updateField('phone')}
+                    required
                     className="w-full border-b border-gray-300 dark:border-zinc-600 bg-transparent py-2 font-serif text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-zinc-500 focus:outline-none focus:border-[#a4362d] transition-colors"
                   />
                 </div>
@@ -80,9 +125,12 @@ const ContactSection: React.FC = () => {
                 <label className="text-gray-900 dark:text-gray-100 font-mono text-[10px] font-bold tracking-widest uppercase mb-2">
                   Email
                 </label>
-                <input 
-                  type="email" 
-                  placeholder="you@example.com" 
+                  <input
+                    type="email"
+                    placeholder="you@example.com"
+                    value={form.email}
+                    onChange={updateField('email')}
+                    required
                   className="w-full border-b border-gray-300 dark:border-zinc-600 bg-transparent py-2 font-serif text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-zinc-500 focus:outline-none focus:border-[#a4362d] transition-colors"
                 />
               </div>
@@ -92,8 +140,8 @@ const ContactSection: React.FC = () => {
                 <label className="text-gray-900 dark:text-gray-100 font-mono text-[10px] font-bold tracking-widest uppercase mb-2">
                   Service Required
                 </label>
-                <select className="w-full border-b border-gray-300 dark:border-zinc-600 bg-transparent py-2 font-serif text-gray-800 dark:text-gray-200 focus:outline-none focus:border-[#a4362d] transition-colors appearance-none cursor-pointer">
-                  <option value="" disabled selected>Select a service...</option>
+                <select value={form.service} onChange={updateField('service')} required className="w-full border-b border-gray-300 dark:border-zinc-600 bg-transparent py-2 font-serif text-gray-800 dark:text-gray-200 focus:outline-none focus:border-[#a4362d] transition-colors appearance-none cursor-pointer">
+                  <option value="" disabled>Select a service...</option>
                   <option value="corporate">Corporate Investigations</option>
                   <option value="background">Background Verification</option>
                   <option value="private">Private Investigations</option>
@@ -110,17 +158,27 @@ const ContactSection: React.FC = () => {
                 <textarea 
                   rows={3}
                   placeholder="Briefly describe your situation. Do not include sensitive personal identifiers here." 
+                  value={form.message}
+                  onChange={updateField('message')}
+                  required
                   className="w-full border-b border-gray-300 dark:border-zinc-600 bg-transparent py-2 font-serif text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-zinc-500 focus:outline-none focus:border-[#a4362d] transition-colors resize-none"
                 ></textarea>
               </div>
 
               {/* Submit Button */}
               <button 
-                type="button" 
-                className="w-full bg-[#a4362d] hover:bg-[#8b2d24] text-white font-mono text-xs tracking-[0.2em] uppercase py-5 transition-colors duration-300 flex items-center justify-center gap-2"
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-[#a4362d] hover:bg-[#8b2d24] disabled:cursor-not-allowed disabled:opacity-60 text-white font-mono text-xs tracking-[0.2em] uppercase py-5 transition-colors duration-300 flex items-center justify-center gap-2"
               >
-                Send Secure Enquiry <span className="text-lg leading-none">&rarr;</span>
+                {isSubmitting ? 'Sending...' : <>Send Secure Enquiry <span className="text-lg leading-none">&rarr;</span></>}
               </button>
+
+              {status && (
+                <p role="status" className={`text-center font-serif text-sm ${status.type === 'success' ? 'text-green-700 dark:text-green-400' : 'text-[#a4362d]'}`}>
+                  {status.message}
+                </p>
+              )}
 
               {/* Footer Note */}
               <div className="flex items-center justify-center gap-2 text-gray-500 dark:text-zinc-500 mt-6">
