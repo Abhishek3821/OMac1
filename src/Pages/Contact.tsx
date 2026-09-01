@@ -141,7 +141,7 @@ const ContactSection: React.FC = () => {
                   Service Required
                 </label>
                 <select value={form.service} onChange={updateField('service')} required className="w-full border-b border-gray-300 dark:border-zinc-600 bg-transparent py-2 font-serif text-gray-800 dark:text-gray-200 focus:outline-none focus:border-[#a4362d] transition-colors appearance-none cursor-pointer">
-                  <option value="" disabled>Select a service...</option>
+                  <option value="" disabled>Select a service..</option>
                   <option value="corporate">Corporate Investigations</option>
                   <option value="background">Background Verification</option>
                   <option value="private">Private Investigations</option>
