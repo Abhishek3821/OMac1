@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // --- Interfaces for data-driven sections ---
 
@@ -210,10 +211,10 @@ const ContactSection: React.FC = () => (
         </h2>
       </div>
       <div className="col-span-12 md:col-span-4 flex items-center justify-end">
-         <div data-animate="fade-right" className="bg-[#fbf9f5] dark:bg-[#1A1A1A] text-gray-800 dark:text-zinc-300 text-sm tracking-widest uppercase font-semibold p-6 flex items-center gap-3 border border-zinc-700 hover:border-zinc-500 cursor-pointer">
+         <Link to="/contact" data-animate="fade-right" className="bg-[#fbf9f5] dark:bg-[#1A1A1A] text-gray-800 dark:text-zinc-300 text-sm tracking-widest uppercase font-semibold p-6 flex items-center gap-3 border border-zinc-700 hover:border-zinc-500 group">
             CONTACT US SECURELY
             <span className="text-zinc-500 group-hover:translate-x-1 transition-transform">→</span>
-          </div>
+          </Link>
       </div>
     </div>
   </section>
